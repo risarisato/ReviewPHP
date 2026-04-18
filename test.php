@@ -104,6 +104,21 @@ echo nl2br($return_value);
 
 // ⑦ test() が終わったあと、次の行があればここから再開する
 
+class User
+{
+    public function hello()
+    {
+        echo "こんにちは";
+    }
+}
+
+$user = new User();
+$result = $user->hello();
+// ここでは echo しているだけ で、return なし！
+var_dump($result); // 出力は NULL になる
+
+
+
 /*
  * まとめ:
  * - 関数はコードの再利用性を高め、複雑な処理を分割して管理しやすくします。
